@@ -54,9 +54,13 @@ if __name__ == "__main__":
     if punctuation:
         choices += " special characters"
 
+    if choices == "":
+        choices = " numbers, letters, and special characters"
+
     # print line stating the number or random strings, the length and the choices of the password
     print(f"Generating {count} Random String password of {length} characters with{choices}")
     # get the 'count' and for make a new password until the count is finished
+    
     for x in range(count):
         # start x at 1 then add 1 to x
         x += 1
@@ -64,4 +68,3 @@ if __name__ == "__main__":
         password = randPass(length, numbers, alpha, punctuation)
         # output the password to the screen
         print(f"{x} : {password}")
-    
